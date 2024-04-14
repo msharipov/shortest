@@ -20,7 +20,6 @@ def check(depth):
     global MAX_DEPTH, circles, points, steps, SHORTEST
     global shortest_steps, shortest_pair
 
-    print(f"{depth}/{MAX_DEPTH}", points)
     if (depth == MAX_DEPTH):
         for p1, p2 in it.combinations(points, 2):
             if (p1.distance(p2) < SHORTEST):
