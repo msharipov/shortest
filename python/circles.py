@@ -22,9 +22,13 @@ def check(depth):
 
     if (depth == MAX_DEPTH):
         for p1, p2 in it.combinations(points, 2):
-            if (p1.distance(p2) < SHORTEST):
+            try:
+                dist = float(p1.distance(p2))
+            except TypeError:
+                print(p1, p2)
+            if (dist < SHORTEST):
                 shortest_steps = steps.copy()
-                SHORTEST = p1.distance(p2)
+                SHORTEST = dist
                 shortest_pair = (p1, p2)
         return
 
