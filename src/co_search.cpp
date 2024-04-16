@@ -19,7 +19,7 @@ int main(void) {
   std::vector<wy::circle<T>> circles = {c1, c2};
   std::vector<wy::point2d<T>> inter;
   alg::naive_group_intersections<wy::circle<T>>(circles.begin(), circles.end(),
-                                 std::back_inserter(inter));
+                                                std::back_inserter(inter));
   for (auto p : inter) {
     std::cout << p << " ";
   }
